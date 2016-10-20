@@ -10,17 +10,21 @@ namespace Vsite.CSharp
     {
         public static bool Sadrži(IEnumerable<string> nizRiječi, string tražena)
         {
+            foreach (string riječ in nizRiječi)
+            {
+                return nizRiječi.Contains(tražena);
+            }
             throw new NotImplementedException();
         }
 
         public static int Zbroj(IEnumerable<int> brojevi)
         {
-            throw new NotImplementedException();
+            return brojevi.Sum();
         }
 
         public static IEnumerable<string> NađiSveIza(IEnumerable<string> riječi, string riječ)
         {
-            throw new NotImplementedException();
+            return riječi.Where(r => r.CompareTo(riječ) > 0);
         }
     }
 }
